@@ -9,7 +9,7 @@ def test_pokemon_count_and_type(api_client):
     assert response_data["count"] == expected_data.expected_data.expected_pokemon_count
 
 
-def test_charmander_in_fire_pokemons(api_client):
+def test_question_two(api_client):
     client = api_client
     fire_type_id = client.get_pokemon_type_id('fire')
     response = client.get_pokemon_type_data('fire')
