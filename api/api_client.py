@@ -51,7 +51,8 @@ class APIClient:
                 pokemon_weights_dict[pokemon_name] = weight
         return pokemon_weights_dict
 
-    def get_five_heaviest_pokemons(self, pokemon_weight_dict: dict):
+    @staticmethod
+    def get_five_heaviest_pokemons(pokemon_weight_dict: dict):
         sorted_pokemons = sorted(pokemon_weight_dict.items(), key=lambda x: x[1], reverse=True)
         five_heaviest_pokemons = sorted_pokemons[:5]
         return five_heaviest_pokemons
