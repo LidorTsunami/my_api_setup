@@ -1,5 +1,4 @@
 import json
-
 import requests
 
 
@@ -49,6 +48,8 @@ class APIClient:
                 weight = iter_resp.json()["weight"]
                 # Creates a new dictionary with the name and weight of each Pokemon
                 pokemon_weights_dict[pokemon_name] = weight
+            else:
+                raise requests.exceptions.HTTPError(f"Received status code {iter_resp.status_code}")
         return pokemon_weights_dict
 
     @staticmethod
