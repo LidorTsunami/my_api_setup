@@ -1,11 +1,11 @@
-import expected_data.expected_data
+import expected_data.expected_data as expected
 
 
 def test_pokemon_count_and_type(api_client):
     response = api_client.get_all()
     response_data = response.json()
     assert isinstance(response_data, dict)
-    assert response_data["count"] == expected_data.expected_data.expected_pokemon_count
+    assert response_data["count"] == expected.expected_pokemon_count
 
 
 def test_question_two(api_client):
@@ -20,4 +20,4 @@ def test_question_two(api_client):
 
 def test_get_five_heaviest_pokemon_of_the_fire_type(api_client):
     response = api_client.get_five_heaviest_pokemons(pokemon_weight_dict=api_client.pokemon_weights('fire'))
-    assert response == list(expected_data.expected_data.expected_heaviest_pokemons.items())
+    assert response == list(expected.expected_heaviest_pokemons.items())
