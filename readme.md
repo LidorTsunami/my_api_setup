@@ -5,5 +5,5 @@ The purpose of these tests is to validate the correctness and functionality of t
 it returns the expected data and behaves as intended.
 
 packages to install:
-pytest
+pytest,
 requests
