@@ -1,1 +1,1 @@
-api_base_url = "https://pokeapi.co/api/v2"
+API_BASE_URL = "https://pokeapi.co/api/v2"
